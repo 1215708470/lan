@@ -1,0 +1,169 @@
+/*页面头部*/
+/* body{
+	background:url(../img/bg/index_static_bg4.jpg) no-repeat center;
+	background-size:100% 100%;
+} */
+.header{
+	height: 134px;
+    width: 100%;
+	margin:0 auto;
+}
+.top{
+	
+	 background:#f6f6f6 
+}
+/* 帮助中心 */
+.top_help{
+	width: 1000px;
+	height:32px;
+	/* background:#F6F6F6;	 */
+	margin:0 auto;
+	position:relative;
+}
+.top_help a:hover{
+	color:#cd9368;
+}
+
+.help i{margin-right:6px;}
+.top_help > .help > a{
+	height:32px;
+	font-size:12px;
+	line-height:32px;
+	color:#000;
+	padding:0px 17px;
+}
+
+.tel{
+	display:inline-block;
+	width:10px;
+	height:12px;
+	background:url(../img/header/top_header.png) no-repeat -27px -20px; 
+	position:absolute;
+	left:0px;
+	top:9px;
+}
+.weixi{
+	display:inline-block;
+	width:17px;
+	height:12px;
+	background:#793B3B url(../img/header/top_header.png) no-repeat -80px -20px; 
+	position:absolute;
+	left:126px;
+	top:10px;	
+}
+.phone{
+	display:inline-block;
+	width:17px;
+	height:12px;
+	background:#793B3B url(../img/header/top_header.png) no-repeat -167px -20px; 
+	position:absolute;
+	left:230px;
+	top:10px;
+}
+.header-welcome > a{
+	margin-right:15px;
+	line-height:32px;
+	font-size:12px;
+}
+i.public-sprite{	
+    width: 15px;
+    height: 14px;
+    display: inline-block;
+    top: 1px;
+    position: relative;
+    display: inline-block;
+    margin-right: 4px;
+	background: url(../img/header/public-sprite.png) no-repeat -15px 0px;
+    background-size: 31px 42px;
+}
+.help{
+    position: relative;
+	font-size:12px;
+}
+.help > a{
+	display: inline-block;
+	height:32px;
+	line-height:32px;
+	padding:0px 16px;
+}
+h4.cumulative{
+	background: #8E0101;
+    margin-top: 10px;
+    color: #FFFFFF;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 16px;
+}
+.header-welcome{
+	width: 370px;
+}
+#loginList > a{
+	height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+	color: #000;
+}
+#loginList{
+	/*  display:none;  */
+}
+.header-welcome{
+	display:none; 
+}
+/* 清除浮动 */
+.clear {clear:both; height:0; font-size:0; line-height:0; overflow:hidden;}
+/* 搜索栏 */
+.search{background:#fff;}
+.search_box{
+	width: 890px;
+    height: 96px;
+    margin: 0px auto;
+    position: relative;
+    padding: 0px 100px;
+}
+.index_need{
+	width:235px;
+	line-height:84px;
+	display:inline-block;
+	position:absolute;
+	bottom:10px;
+}
+
+.seek{
+	display: inline-block;
+	width: 300px;
+	height: 29px;
+	margin: 30px 0px;
+	border: 1px solid #333;
+	background: #333;
+	overflow: hidden;
+	float: right;
+}
+div.seek > .sek{
+	outline: none;
+	width: 246px;
+	height: 25px;
+}
+.seek>a{
+	display: inline-block;
+	width: 40px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+}
+/* 导航栏 */
+
+/* 轮播 */
+
+ 
+/* 右侧条 */
+
+/*购物车*/
+
+/*内容部分*/
+
+/*新品上架*/
+
+/*f4*/
+
+/* 搭配推荐 */
+

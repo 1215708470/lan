@@ -1,0 +1,63 @@
+﻿SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+
+--
+-- Database: `gd`
+--
+
+-- --------------------------------------------------------
+
+
+CREATE TABLE `gd_clothing_pic` (
+  `pid` int(11) NOT NULL,
+  `clothing_id` int(11) DEFAULT NULL,
+  `sm` varchar(128) DEFAULT NULL,
+  `md` varchar(128) DEFAULT NULL,
+  `lg` varchar(128) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `gd_clothing_pic` (`pid`, `clothing_id`, `sm`, `md`, `lg`) VALUES
+(1, 1, 'img/particulars/5a62e06fdfb58.jpg', 'img/particulars/5a62e06fdfb58.jpg', 'img/particulars/5a62e06fdfb58.jpg'),
+(2, 1, 'img/particulars/5a62e06fdff18.jpg', 'img/particulars/5a62e06fdff18.jpg', 'img/particulars/5a62e06fdff18.jpg'),
+(3, 1, 'img/particulars/5a62e06fe024f.jpg', 'img/particulars/5a62e06fe024f.jpg', 'img/particulars/5a62e06fe024f.jpg'),
+(4, 2, 'img/particulars/5a62e06fdfb58.jpg', 'img/particulars/5a62e06fdfb58.jpg', 'img/particulars/5a62e06fdfb58.jpg'),
+(5, 2, 'img/particulars/5a62e06fdff18.jpg', 'img/particulars/5a62e06fdff18.jpg', 'img/particulars/5a62e06fdff18.jpg'),
+(6, 2, 'img/particulars/5a62e06fe024f.jpg', 'img/particulars/5a62e06fe024f.jpg', 'img/particulars/5a62e06fe024f.jpg'),
+(7, 3, 'img/particulars/5a62e06fdfb58.jpg', 'img/particulars/5a62e06fdfb58.jpg', 'img/particulars/5a62e06fdfb58.jpg'),
+(8, 3, 'img/particulars/5a62e06fdff18.jpg', 'img/particulars/5a62e06fdff18.jpg', 'img/particulars/5a62e06fdff18.jpg'),
+(9, 3, 'img/particulars/5a62e06fe024f.jpg', 'img/particulars/5a62e06fe024f.jpg', 'img/particulars/5a62e06fe024f.jpg'),
+(10, 4, 'img/particulars/5a62e06fdfb58.jpg', 'img/particulars/5a62e06fdfb58.jpg', 'img/particulars/5a62e06fdfb58.jpg'),
+(11, 4, 'img/particulars/5a62e06fdff18.jpg', 'img/particulars/5a62e06fdff18.jpg', 'img/particulars/5a62e06fdff18.jpg'),
+(12, 4, 'img/particulars/5a62e06fe024f.jpg', 'img/particulars/5a62e06fe024f.jpg', 'img/particulars/5a62e06fe024f.jpg'),
+(13, 5, 'img/particulars/57e3b072N661cd00d.jpg', 'img/particulars/57e3b072N661cd00d.jpg', 'img/particulars/57e3b072N661cd00d.jpg'),
+(14, 5, 'img/particulars/57e1ff09Nf610fea3.jpg', 'img/particulars/57e1ff09Nf610fea3.jpg', 'img/particulars/57e1ff09Nf610fea3.jpg'),
+(15, 5, 'img/particulars/57e1ff17N286390a9.jpg', 'img/particulars/57e1ff17N286390a9.jpg', 'img/particulars/57e1ff17N286390a9.jpg'),
+(16, 5, 'img/particulars/57e1ff2fN8a36d0fe.jpg', 'img/particulars/57e1ff2fN8a36d0fe.jpg', 'img/particulars/57e1ff2fN8a36d0fe.jpg'),
+(17, 5, 'img/particulars/57e52dffNa4d8ce2c.jpg', 'img/particulars/57e52dffNa4d8ce2c.jpg', 'img/particulars/57e52dffNa4d8ce2c.jpg'),
+(18, 5, 'img/particulars/57e52e03N4ec367dd.jpg', 'img/particulars/57e52e03N4ec367dd.jpg', 'img/particulars/57e52e03N4ec367dd.jpg'),
+(19, 5, 'img/particulars/57e52e06N116974f7.jpg', 'img/particulars/57e52e06N116974f7.jpg', 'img/particulars/57e52e06N116974f7.jpg'),
+(20, 6, 'img/particulars/57e3b072N661cd00d.jpg', 'img/particulars/57e3b072N661cd00d.jpg', 'img/particulars/57e3b072N661cd00d.jpg'),
+(21, 6, 'img/particulars/57e1ff09Nf610fea3.jpg', 'img/particulars/57e1ff09Nf610fea3.jpg', 'img/particulars/57e1ff09Nf610fea3.jpg'),
+(22, 6, 'img/particulars/57e1ff17N286390a9.jpg', 'img/particulars/57e1ff17N286390a9.jpg', 'img/particulars/57e1ff17N286390a9.jpg'),
+(23, 6, 'img/particulars/57e1ff2fN8a36d0fe.jpg', 'img/particulars/57e1ff2fN8a36d0fe.jpg', 'img/particulars/57e1ff2fN8a36d0fe.jpg'),
+(24, 6, 'img/particulars/57e52dffNa4d8ce2c.jpg', 'img/particulars/57e52dffNa4d8ce2c.jpg', 'img/particulars/57e52dffNa4d8ce2c.jpg'),
+(25, 6, 'img/particulars/57e52e03N4ec367dd.jpg', 'img/particulars/57e52e03N4ec367dd.jpg', 'img/particulars/57e52e03N4ec367dd.jpg');
+(25, 6, 'img/particulars/5a62e06fe09a2.jpg', 'img/particulars/5a62e06fe09a2.jpg', 'img/particulars/5a62e06fe09a2.jpg');
+
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `gd_laptop_pic`
+--
+ALTER TABLE `gd_clothing_pic`
+  ADD PRIMARY KEY (`pid`);
+
+
+
+
+ALTER TABLE `gd_clothing_pic`

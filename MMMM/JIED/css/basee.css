@@ -1,0 +1,61 @@
+﻿/*设置通用样式*/
+ /*phone*/
+  @media screen and (max-width: 767px){
+    body{  min-width: 1875px;  }
+  }
+ /*pc*/
+ @media screen and (min-width:992px) {
+	body{  min-width: 1200px;  }
+ }
+html,body{
+	height:100%;
+}
+a{
+	text-decoration: none;
+	color:#5d5959;
+}
+.wrrap{
+	max-width: 1908px;
+	 width:100%;
+	margin:0 auto;
+}
+body{
+	/* min-width: 1200px; */
+	font:12px "simhei",Arial;
+	color: #6B6A6A;
+	margin:0;
+	padding:0;
+	background:#fff;
+}
+ h1,h2,h3,h4,h5,h6,ul,ol,dl,dd{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+
+img{
+	vertical-align:middle;/*  */
+}
+.lf{
+	float:left;
+}
+.rf{
+	float:right;
+}
+.error {
+    text-align: center;
+    margin: 5px 0px 5px 76px;
+    width: 250px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid red;
+    color:red;
+    margin-top: 0;
+    opacity: 0;
+}
+/*引入头部文件的样式*/
+
+/* 网页底部foot */
+
+	

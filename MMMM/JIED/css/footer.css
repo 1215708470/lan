@@ -1,0 +1,102 @@
+/*页面底部*/
+footer.footer{
+	width:100%;
+	height:445px;
+}
+@media screen and (min-width: 992px) and (max-width:1920px){
+	.foot_barcode{
+	width: 57%;
+}
+ }
+ @media only screen and (max-width:991px){
+ 	.foot_barcode{
+	width: 57%;
+}
+ }
+ @media screen and (min-width: 992px) and (max-width:1920px){
+
+}
+ 
+ @media screen and (min-width:768px) and (max-width:991px){
+
+ }
+ footer > div.foot_box{
+	width: 1001px;
+	height:200px;
+	padding:30px 0px;
+	margin:0 auto;
+}
+ /*phone*/
+@media screen and (max-width: 767px){
+
+}
+ 
+footer > div.foot{
+	width: 50%;
+	height:185px;
+	margin:0 auto;
+}
+.foot_box > div.foot_serve{
+	width:162px;
+	height:140px;
+	border-left: 1px dashed #ddd;
+    border-right: 1px dashed #ddd;
+}
+div.foot_serve > a{
+	display: inline-block;
+    margin: 16px 5px;
+    width: 65px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #cd9368;
+    border-radius: 4px;
+    color: #cd9368;
+}
+.foot_guide > li{
+	width:110px;
+	height:140px;
+	border-right: 1px dashed #ddd;
+	text-align:center;
+}
+ul.foot_guide > li > a{
+	display:block;
+	line-height:26px;
+	color:#999;
+	font-size: 13px;
+}
+ul.foot_guide > li > h3{
+	margin-bottom:12px;
+	font-size: 16px;
+}
+ul.foot_barcode > li{
+	float:left;;
+	margin-left:45px;
+}
+ul.foot_barcode > li > h3{
+	text-align:center;
+	margin-bottom:12px;
+}
+ul.foot_barcode > li > img{
+	width:96px;
+}
+div.foot_btm > div{
+	text-align:center;
+	height:30px;
+	color:#999;
+	margin:30px 0px;
+}
+div.foot_btm > div > a{
+	margin:0 10px;
+}
+div.foot_btm > p{
+	text-align:center;
+	margin: 20px 0px;
+}
+.foot_btm > p > a{
+	padding: 0 12px;
+}
+.foot_btm{
+	width: 96%;
+    margin: 0 auto;
+}

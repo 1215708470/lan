@@ -1,0 +1,9 @@
+<?php
+//data/cart/add.php
+require_once("cart.php");
+session_start();
+@$uid=$_SESSION["uid"];
+@$lcid=$_REQUEST["lcid"];
+@$count=1;//$_REQUEST["count"];
+if($uid!=null&&$lcid!=null&&$count!=null)
+	insert($uid,$lcid,$count);

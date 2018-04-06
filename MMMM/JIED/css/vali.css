@@ -1,0 +1,7 @@
+.vali-fail{
+  display:none; color:red;
+}
+.login-fail{
+  background:lightyellow;
+  color:red;
+}

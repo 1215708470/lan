@@ -1,0 +1,34 @@
+<?php
+   /*#1.接连数据库
+      require("../init.php");
+   #2.接收前端传递过来的数据
+      $uname=$_REQUEST["uname"];
+   #3.拼接查询sql语句
+      $sql="select * from gd_user where uname='$uname'";
+   #4.执行sql语句并得到结果
+      $result=mysqli_query($conn,$sql);
+   #5.从结果中取出一行数据
+      $row=mysqli_fetch_row($result);
+   #6.根据取出的数据结果，给出响应
+      if($row==null){
+	     echo "0";
+	  }else{
+	     echo "1";
+	  }*/
+	   #1.接连数据库
+      require("../init.php");
+   #2.接收前端传递过来的数据
+      @$phone=$_REQUEST["phone"];
+   #3.拼接查询sql语句
+      $sql="select * from gd_user where phone='$phone'";
+   #4.执行sql语句并得到结果
+      $result=mysqli_query($conn,$sql);
+   #5.从结果中取出一行数据
+      $row=mysqli_fetch_row($result);
+   #6.根据取出的数据结果，给出响应
+      if($row==null){
+	     echo "0";
+	  }else{
+	     echo "1";
+	  }
+?>

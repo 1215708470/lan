@@ -1,0 +1,271 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <meta charset="utf-8" />  
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />  
+        <title>HTML5测试</title>  
+       <!-- <link rel="stylesheet" type="text/css" href="style.css"/>  -->
+       <style>
+       	@-webkit-keyframes 'left-in'{  
+    0% {  
+        visibility:visible;  
+        left: -100%;  
+    }  
+    100% {  
+        visibility:visible;  
+        left: 0%;  
+    }  
+      
+}  
+@-webkit-keyframes 'right-out'{  
+    0% {  
+        visibility:visible;  
+        left: 0%;  
+    }  
+    100% {  
+        visibility:visible;  
+        left: 100%;  
+    }  
+}  
+@-webkit-keyframes 'left-out'{  
+    0% {  
+        visibility:visible;  
+        left: 0%;  
+    }  
+    100% {  
+        visibility:visible;  
+        left: -100%;  
+    }  
+      
+}  
+@-webkit-keyframes 'right-in'{  
+    0% {  
+        visibility:visible;  
+        left: 100%;  
+    }  
+    100% {  
+        visibility:visible;  
+        left: 0%;  
+    }  
+}  
+.right-in{  
+    visibility:visible;  
+    -webkit-animation-name: 'right-in';  
+    -webkit-animation-duration: 1s;  
+}  
+.left-out{  
+    visibility:hidden;  
+    -webkit-animation-name: 'left-out';  
+    -webkit-animation-duration: 1s;  
+}  
+.left-in{  
+    visibility:visible;  
+    -webkit-animation-name: 'left-in';  
+    -webkit-animation-duration: 1s;  
+}  
+.right-out{  
+    visibility:hidden;  
+    -webkit-animation-name: 'right-out';  
+    -webkit-animation-duration: 1s;  
+      
+}  
+.slide{  
+    position: absolute;  
+    top:0px;  
+    left: 0px;  
+    box-sizing: border-box;  
+    width: 1075px;
+     
+    background-color: white;  
+}  
+.slide-container{  
+    position: relative;
+    width: 1075px;
+   	height: 629px;
+    margin: 0 auto;
+    padding: 1px;
+    overflow: hidden;
+    text-align: center;
+}  
+.slide-img{  
+    /*width: 100%;  
+    height: 100%;  */
+}  
+.slide-dec{  
+    width: 100%;  
+    white-space: nowrap;  
+    text-overflow: ellipsis;  
+    overflow: hidden;  
+    position: relative;  
+    top:-20%;  
+    text-align: center;  
+    color: #FFF;  
+}  
+#slide-tabs{  
+    position: absolute;  
+    top: 90%;  
+    width: 100%;  
+    height: 3%;  
+    margin: 0 auto;  
+    text-align: center;  
+}  
+.slide-tab{  
+    position: relative;  
+    display: inline-block;  
+    height: 15px;  
+    width: 15px;  
+    border-radius: 50%;  
+    background-color: #e0e0e0;  
+    cursor: pointer;  
+    margin-right: 2%;  
+}  
+.slide-tab:hover{  
+    background-color: #FFFFFF;  
+}  
+.slide-tab-acitve{  
+    background-color: #FFFFFF;  
+}  
+@media only screen and (max-width: 500px) {  
+    .slide-tab{  
+        height: 10px;  
+        width: 10px;  
+    }  
+    .slide-container{  
+        height: 200px;  
+    }  
+    .slide-dec{  
+        font-size: 11px;  
+    }  
+}  
+       </style>
+       <script>
+       		var slide;  
+var tabs;  
+var slide_index;  
+var interval;  
+function init_tabs(){  
+    slide = document.getElementsByClassName("slide");  
+    slide_index = slide.length-1;  
+    var tabc = document.getElementById("slide-tabs");  
+    var html = "";  
+    for(var i=0;i<slide.length;i++){  
+        html+='<span class="slide-tab" onclick="slide_x('+i+')" > </span>';  
+    }  
+    tabc.innerHTML=html;  
+    tabs=tabc.childNodes;  
+    tabs[slide_index].className = addCls(tabs[slide_index].className,"slide-tab-acitve");  
+    cInterval();  
+}  
+function pInterval(){  
+    clearInterval(interval);  
+    interval = -1;  
+}  
+function cInterval(){  
+    if(interval!=-1)clearInterval(interval);  
+    interval = setInterval("slide_last()",5000);  
+}  
+function auto_next(){  
+    slide_out(slide_index);  
+    slide_index=(slide_index-1+slide.length)%slide.length;  
+    slide_in(slide_index);  
+}  
+function slide_out(i){  
+    slide[i].className=remCls(slide[i].className,'right-in');  
+    slide[i].className=remCls(slide[i].className,'left-in');  
+    slide[i].className=addCls(slide[i].className,'right-out');  
+    tabs[i].className = remCls(tabs[i].className,"slide-tab-acitve");  
+}  
+function slide_in(i){  
+    slide[i].className=remCls(slide[i].className,'left-out');  
+    slide[i].className=remCls(slide[i].className,'right-out');  
+    slide[i].className=addCls(slide[i].className,'left-in');  
+    tabs[i].className = addCls(tabs[i].className,"slide-tab-acitve");  
+}  
+function slide_x(x){  
+    pInterval();  
+    x=x%slide.length;  
+    slide_out(slide_index);  
+    slide_in(x);  
+    slide_index=x;  
+    cInterval();  
+}  
+function remCls(o,n){  
+    if(o==null||typeof(o)!='string')return o;  
+    var x = o.indexOf(n);  
+    if(x>-1){  
+        if(x>0) o=o.replace(n,'');  
+        else o=o.replace(" "+n,'');  
+    }  
+    return o;  
+}  
+function addCls(o,n){  
+    if(o==null||typeof(o)!='string')return o;  
+    if(o.length>0) o+=' '+n;  
+    else o+=n;  
+    return o;  
+}  
+function slide_next(){  
+    var x=(slide_index-1+slide.length)%slide.length;  
+    slide_x(x);  
+}  
+function slide_last(){  
+    pInterval();  
+    slide[slide_index].className=remCls(slide[slide_index].className,'left-in');  
+    slide[slide_index].className=remCls(slide[slide_index].className,'right-in');  
+    slide[slide_index].className=addCls(slide[slide_index].className,'left-out');  
+    tabs[slide_index].className = remCls(tabs[slide_index].className,"slide-tab-acitve");  
+      
+    slide_index=(slide_index+1)%slide.length;  
+      
+    slide[slide_index].className=remCls(slide[slide_index].className,'left-out');  
+    slide[slide_index].className=remCls(slide[slide_index].className,'right-out');  
+    slide[slide_index].className=addCls(slide[slide_index].className,'right-in');  
+    tabs[slide_index].className = addCls(tabs[slide_index].className,"slide-tab-acitve");  
+    cInterval();  
+}  
+       </script>
+        <!--<script src="script.js" type="text/javascript" charset="utf-8"></script>-->  
+        <script type="text/javascript">  
+                window.onload = function(){  
+                    init_tabs();  
+                }  
+        </script>  
+    </head>  
+    <body>  
+        <!-- 轮播容器 -->  
+        <div class="slide-container" onmouseenter="pInterval()" onmouseleave="cInterval()">  
+            <!-- 轮播组件  最后一个不用加right-out类-->  
+            <div class="slide right-out">  
+                <img src="GIRDqqqqq_files/tue.jpg" class="slide-img">  
+                <div class='slide-dec'>这里放说明 0</div>  
+            </div>  
+            <div class="slide right-out">  
+                <img src="GIRDqqqqq_files/wed.jpg" class="slide-img">  
+                <div class='slide-dec'>这里放说明 1</div>  
+            </div>  
+            <div class="slide right-out">  
+                <img src="GIRDqqqqq_files/thu.jpg" class="slide-img">  
+                <div class='slide-dec'>这里放说明 2</div>  
+            </div>  
+            <div class="slide right-out">  
+                <img src="GIRDqqqqq_files/fri.jpg" class="slide-img">  
+                <div class='slide-dec'>这里放说明 3</div>  
+            </div>  
+            <div class="slide right-out">  
+                <img src="GIRDqqqqq_files/sun.jpg" class="slide-img">  
+                <div class='slide-dec'>这里放说明 4</div>  
+            </div>  
+            <div class="slide">  
+                <img src="GIRDqqqqq_files/mon.jpg" class="slide-img">  
+                <div class='slide-dec'>这里放说明这里放说明这里放说明这里放说明这里放说明这里放说明这里放说明 5</div>  
+            </div>  
+              
+            <!-- 导航点 -->  
+            <div id="slide-tabs"></div>  
+              
+        </div>  
+        <!-- 轮播结束 -->  
+        <input type="button" name="" id="" value="LEFT"  onclick="slide_last()"/>  
+        <input type="button" name="" id="" value="RIGHT"  onclick="slide_next()"/>  
+    </body>  
+</html>  

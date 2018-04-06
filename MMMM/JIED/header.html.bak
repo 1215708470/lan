@@ -1,0 +1,46 @@
+	<!-- 页面头部 -->
+		<div class="top">
+		 <!-- 上：帮助中心 -->
+		 <div class="top_help">
+			<div id="loginList" class="lf">
+				<a href="login.html">请登录</a>
+				<a href="register.html">注册</a>
+			</div>
+			<div class="header-welcome lf">
+				
+        		<a rel="nofollow"  href="" id="uname"></a>
+				<a rel="nofollow"  href="">我的订单</a>
+				<a rel="nofollow"  href=""><i class="public-sprite header-icon-jifen"></i>积分:500</a>
+				<a id="logout" href="javascript:;">【退出】</a>
+				
+			</div>
+			<div class="help rf">
+					<a href="#"><i class="tel"></i>159-1971-5894</a>
+					<span>|</span>
+					<a href="#"><i class="weixi"></i>微信商城</a>
+					<span>|</span>
+					<a href="#"><i class="phone"></i>手机商城</a>
+					<span>|</span>
+					<a href="#">帮助中心</a>
+				</div>
+			<div class="clear"></div>
+		 </div>
+		</div>
+		<!-- 中：搜索栏 -->
+		<div class="search">
+		 <div class="search_box">
+			<!-- 左 -->
+			<div class="index_need">
+				<a href="#"><img src="img/header/index_need.jpg"></a>
+			</div>
+			<!-- 中 -->
+			<div></div>
+			<!-- 右 -->
+			<div class="seek">
+				<input type="text" class="sek">
+				<a href="#">搜索</a>
+			</div>
+		 </div>
+		</div>
+		<!-- 导航条 -->
+		

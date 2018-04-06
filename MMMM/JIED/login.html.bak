@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>用户登录</title>
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/basee.css">
+  <link rel="stylesheet" href="css/index.css">
+ <!-- <link rel="stylesheet" href="css/vali.css">-->
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+</head>
+<body>
+	<!--  外层盒子  -->
+  <div>
+   <!--  主区域盒子  -->
+   <div class="wrrap">
+				<header class="header" id="header">
+				</header>
+					<!-- 导航条 -->
+		  	<nav class="nav_box">
+	  		</nav>
+	  		<div class="main">
+	  			<!-- <div class="pic lf">
+	  				<img src="img/login/login_img.jpg"/>
+	  			</div> -->
+	  			<div class="userform rf">
+	  					<p class="userform_hd">会员登录</p>
+						<p class="error"></p>
+	  				<form id="login">
+   				 		<span class="login_uame">手机号:</span> 	<input id="txtName" name="pnone" placeholder="会员名/邮箱地址/手机号"/><br>
+ 				  	 	<span class="login_upwd">密 &nbsp;码:</span>	<input id="txtPwd" type="password" name="upwd"/><br>
+ 				  	 	<p class="aoid_login">
+ 				  	 		<!-- <input type="checkbox" id="J_LongLogin_1" name="remember" checked="checked" value="1" tabindex="4"> -->
+ 				  	 		<span >十天内免登录</span>
+ 				  	 		<a href="" class="login_help"></a>
+ 				  	 	</p>
+                        <div style="height:10px"></div>
+                        <p class="but_box">
+                            <input type="button" value="登录" class="login_btn"><span>忘记密码？</span>
+							
+                        </p>
+                        <div class="note_landing">
+                            <p><a class="phoneBg"></a><a>短信验证登录 |</a><a href="register.html">&nbsp;免费注册</a></p>
+                        </div>
+  					</form>	
+	  			 </div>
+				
+	  		</div>
+  			<div class="warm_prompt">温馨提示:由于系统升级,若输入密码正确,但提示登录错误的,请联系我们的客服。</div>
+  			<!--页面底部-->
+  			<footer class="footer">
+  				<div class="foot_box">
+  					<!--关于我们-->
+  					<div class="foot_serve lf">
+  						<img src="img/footer/010.jpg"/>
+  						<a href="foot_service">关于我们</a>
+  						<a href="add_email">售后服务</a>
+  					</div>
+  					<ul class="foot_guide lf">
+  						<li class="lf">
+  							<h3>购物指南</h3>
+  							<a href="">会员礼遇</a>
+  							<a href="">商城保障</a>
+  							<a href="">购物指南</a>
+  							<a href="">售后服务</a>
+  						</li>
+  						<li class="lf">
+  							<h3>关于我们</h3>
+  							<a href="">公司简介</a>
+  							<a href="">公司官网</a>
+  							<a href="">帮助中心</a>
+  							<a href="">联系我们</a>
+  						</li>
+  					</ul>
+  					<!--二维码-->
+  					<ul class="foot_barcode rf">
+  						<li>
+  							<h3>微信商城</h3>
+  							<img src="img/footer/20180217200859.png"/>
+  						</li>
+  						<li>
+  							<h3>手机商城</h3>
+  							<img src="img/footer/20180217200859.png"/>
+  						</li>
+  						<li>
+  							<h3>新浪微博</h3>
+  							<img src="img/footer/20180217200859.png"/>
+  						</li>
+  						<li>
+  							<h3>苹果APP</h3>
+  							<img src="img/footer/20180217200859.png"/>
+  						</li>
+  					</ul>
+  				</div>
+  				<div style="width:50%;height: 1px;background: #ddd; margin: 0 auto;"></div><!-- border:.5px solid #ddd;-->
+  				<div class="foot_btm">
+  					<div>
+  						<a href="">友情链接：</a>
+  						<a href="">申请友情链接</a>
+  						<b>|</b>
+  						<a href="">广东服饰研发有限公司</a>
+  						<b>|</b>
+  						<a href="">官方旗舰店 - 天猫</a>
+  						<b>|</b>
+  						<a href="">官方旗舰店 - 京东</a>
+  						<b>|</b>
+  						<a href="">快递单号查询</a>
+  					</div>
+  					<p>
+  						官方商城版权 Copyright © 2018 www.baidu.cn All Rights Reserved
+  						<a href="http://www.miitbeian.gov.cn/" target="_blank" =""="">粤ICP备123456号-1</a>
+           </p>
+  				</div>
+  			</footer>
+	  </div>
+   </div>
+  <script src="jquery-3.2.0.min.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/public.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

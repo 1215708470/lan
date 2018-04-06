@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>用户注册</title>
+	<link rel="stylesheet" href="css/login.css" />
+	<link rel="stylesheet" href="css/basee.css">
+	<link rel="stylesheet" href="css/index.css">
+	<!-- <link rel="stylesheet" href="css/vali.css">-->
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<style>
+		form > div > p > span > img{
+			display:inline-block;
+			vertical-align: text-bottom;
+			padding:0px 5px;
+		}
+		form > div > p > input{
+			width:180px;
+			height: 23px;
+		}
+		form > div > p > span{
+			display:inline-block;
+			font: 12px/1.5 "\5FAE\8F6F\96C5\9ED1",Arial,HELVETICA;
+			line-height:23px;
+			padding: 0px 5px;
+			background:#f4f3f3;
+		}
+		input.form_control{
+			width:65px;
+		}
+		#setYzm{
+			border: 1px solid #CDCDCD;
+			cursor: pointer;
+			display: inline;
+			height: 35px;
+			width: 100px;
+			vertical-align: middle;
+		}
+		p > input.form_btn{
+			background-color: #950B00;
+			border-color: #950B00;
+			font-size: 14px;
+			font-weight: bold;
+			height: 30px;
+			line-height: 27px;
+			cursor: pointer;
+			display: inline-block;
+			padding: 0 10px;
+			color: #FFFFFF;
+		}
+		.main_box{
+			text-align: center;
+			width:1000px;
+			margin: 0 auto;
+		}
+		.tip_img{
+			border: 1px solid #efefef;
+			background: #f8f8f8;
+			height: 90px;
+			margin-top: 30px;
+			line-height: 90px;
+		}
+		div.main_box > div.form_box{
+			width:700px;
+			margin: 50px auto;
+			text-align: left;
+		}
+		.protocol{
+			padding-left: 60px;
+			margin:30px 0px;
+		}
+		.pwd_status{
+			width: 183px;
+			position:relative;
+			background-color: #CFC6BD;
+			margin-left: 60px;
+			top: -9px;
+		}
+		.pwd_status > div.backdrop_color{
+			width: 61px;
+			background-color: #87715A;
+			height: 14px;
+			overflow: hidden;
+		}
+		.pwd_status > div.intensity{
+			position: absolute;
+			top: 0;
+			left:0;
+		}
+		div.intensity > span{
+			width:60px;
+			float: left;
+			height: 14px;
+			text-align: center;
+			color:#fff;
+		}
+		.affirm{
+			margin-top:0px;
+		}
+	</style>
+	<script src="js/index.js"></script>
+</head>
+<body>
+<!--  外层盒子  -->
+<div>
+	<!--  主区域盒子  -->
+	<div class="wrrap">
+		<header class="header" id="header">
+			<!-- 页面头部 -->
+		</header>
+		<!-- 导航条 -->
+		<nav class="nav_box">
+			
+		</nav>
+		<!-- 页面主体 -->
+		<div class="main_box">
+			<div class="tip_img"><img src="img/login/user_nav1.jpg" alt=""></div>
+			<div class="form_box">
+				<form action="">
+					<div>
+						<!--<p>-->
+							<!--用户名称：<input type="text" name="uname" id="uname">-->
+							<!--<span id="uname-show"></span>-->
+						<!--</p>-->
+						<p>手机号码：<input type="text" name="phone" id="phone" placeholder="请输入您的手机号码" >
+							<span id="phone-show"></span>
+						</p>
+						<p>
+							登陆密码：<input type="password" maxlength="18" id="upwd" name="upwd" onkeyup="passResi()">
+							<span id="upwd-show" ></span>
+							<div class="pwd_status">
+								<div class="backdrop_color"></div>
+								<div class="intensity">
+									<span>弱</span><span>中</span><span>强</span>
+								</div>
+							</div>
+						</p>
+						<p class="affirm">
+							确认密码：<input type="password" maxlength="18" id="cpwd" name="cpwd" >
+							<span id="cpwd-show"></span>
+						</p>
+						<p>
+							验 证 码：<input id="yzm" type="text" class="form_control" placeholder=""  />
+							<b id="qh"><img id="setYzm"  title="看不清点击换一张" src="data/register/01_code.php" /></b>
+							<span id="yzm-show"></span>
+						</p>
+						<p class="protocol">
+							<input type="button"  value="同意协议并注册" class="form_btn">
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!--页面底部-->
+		<footer class="footer" id="footer">
+		</footer>
+	</div>
+</div>
+<script src="js/jquery-3.2.1.js"></script>
+ <script src="js/public.js"></script>
+<script>
+    $(":button").click(function(){
+        //获取输入的值
+       // var uname=$("[name=uname]").val();
+        var phone=$("[name=phone]").val();
+        var upwd=$("[name=upwd]").val();
+        var cpwd=$("[name=cpwd]").val();
+        var yzm = $("#yzm").val();
+        //正则
+        //var re_uname = /^[a-zA-z]\w{3,15}$/;//帐号正则
+        var re_phone = /^1\d{10}$/;			//手机正则
+        var regYzm = /^[a-z]{4}$/i;         //验证码正则
+        $.post("data/register/02-check-uname.php?phone="+phone).then(data=>{
+            console.log(data)
+            if(data==1){
+               /* //验证帐号的输入
+                $("#uname-show").html("<img src='img/login/err.png'>该用户已存在，不能注册");
+            }else if(!re_uname.test(uname)){
+                $("#uname-show").html("<img src='img/login/err.png'>帐号必须以字母、数字、下划线组成，字母开头，4-16位");
+            }else{
+                $("#uname-show").html("<img src='img/login/ok.png'>帐号可用");*/
+                //验证手机号的输入
+				$("#phone-show").html("<img src='img/login/err.png'>该手机已绑定其他帐号。");
+            }else if(phone==""||phone==null){
+				$("#phone-show").html("<img src='img/login/err.png'>请输入您的手机号码，以方便日后找回密码。");
+			}else if(!re_phone.test(phone)){
+				$("#phone-show").html("<img src='img/login/err.png'>手机号码格式不正确。");
+			}else{
+				$("#phone-show").html("<img src='img/login/ok.png'>");
+                //验证密码的输入
+                if(upwd==""||upwd==null){
+                    $("#upwd-show").html("<img src='img/login/err.png'>密码不能为空");
+                }else if(upwd.length<6||upwd.length>16) {
+                    $("#upwd-show").html("<img src='img/login/err.png'>密码必须介于6~16位之间!");
+                }else{
+                    $("#upwd-show").html("<img src='img/login/ok.png'>");
+                    if(cpwd==""||cpwd==null){
+                        $("#cpwd-show").html("<img src='img/login/err.png'>请再次输入密码");
+                    }else if(cpwd!==upwd){
+                        $("#cpwd-show").html("<img src='img/login/err.png'>两次密码不一致");
+                    }else{
+                        //验证验证码的输入
+                        $("#cpwd-show").html("<img src='img/login/ok.png'>");
+                        //如果验证不成功
+                        if(!regYzm.test(yzm)){
+                            $("#yzm-show").html("<img src='img/login/err.png'>验证码格式不正确，请检查");//提示出错
+                        }else{
+                            $("#yzm-show").html("");
+							//获取验证码
+							$.ajax({
+								type:"post",
+								url:"data/register/code_register.php",
+								data:{yzm:yzm},
+								success:function (data) {
+									if(data.code==-1){
+										//alert(data.msg);
+										$("#yzm-show").html("<img src='img/login/err.png'>验证码错误，请重试");//提示出错
+										//如果验证码正确则进行注册
+									}else if(data.code==1){
+										$.ajax({
+											type:"post",
+											url:"data/register/02-register.php",
+											data:{upwd:upwd,phone:phone},
+											success:function () {
+												alert("注册成功");
+												location.href = "register.html";//自动跳转主程序
+											},
+											error:function () {alert("网络故障")}
+										})
+									}
+								}
+							})
+						}
+					}
+				}
+			}
+        })
+    });
+    //刷新验证码
+    $("#qh").click(function () {
+        $("#qh").html(`<img id='setYzm' title='看不清点击换一张' src='data/register/01_code.php' />`);
+    })
+	//密码强度
+    $('#cpwd').attr('disabled',true);
+    function passResi()
+    {
+        var str = $.trim($('#upwd').val());
+        var num = 61; var is_show = 0;
+        if(str.length < 6)
+        {
+            num = 61;
+            $('#cpwd').attr('disabled',true);
+        }else if(str.length < 12)
+        {
+            num = 121; is_show = 1;
+        }else if(str.length < 16)
+        {
+            num = 181; is_show = 1;
+        }else if(str.length > 17)
+        {
+            is_show = 0;
+            $('#cpwd').attr('disabled',true);
+        }
+        if(is_show)
+        {
+            $('#cpwd').attr('disabled',false);
+        }else
+        {
+            $('#cpwc').attr('disabled',true);
+        }
+        $('.backdrop_color').stop(true,true).animate({'width':num+'px'},500);
+    }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+  

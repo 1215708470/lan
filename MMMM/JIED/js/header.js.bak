@@ -1,0 +1,36 @@
+/*引用头部网页*/
+$(()=>{
+	$.ajax({
+		type:"get",
+		url:"header.html"
+	}).then(html=>{$("#header").html(html);
+	})
+	
+		//登陆
+		$.getJSON("data/users/isLogin.php").then(data=>{
+			console.log(data)
+			if(data.ok==0)
+				$("#loginList").show().next().hide()
+			else{
+				$("#loginList").hide().next().show();
+				$("#uName").html(data.phone);
+			}
+//添加搜索
+var $input=$("#txtSearch");
+$("[data-trigger=search]").click(function(){
+    if($input.val().trim().length>0){
+        location="products.html?kw="+$input.val().trim();
+    }
+});
+
+//注销
+		$("#logout").click(function(){
+			$.get("data/users/logout.php").then(()=>{
+				$("#loginList").show().next().hide();
+			})
+		})
+		})
+		
+})
+
+/*引用底部网页*/

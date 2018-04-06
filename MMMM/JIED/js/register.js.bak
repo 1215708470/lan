@@ -1,0 +1,130 @@
+/*function $(id){
+  return document.getElementById(id);
+}
+function createXhr(){
+		    var xhr=null;
+			if(window.XMLHttpRequest){
+			 xhr=new XMLHttpRequest(); //标准创建
+			}else{
+				//IE8以下的创建方式
+			 xhr=new ActiveXObject("Microsoft.XMLHttp");
+			}
+			return xhr;
+		 }*/
+ var isUname=true; //允许注册
+ var isName=true;
+ var uname=$("#uname").val();
+ 
+	    //检查用户名是否存在
+		$("#uname").blur(function(){
+			/*$.ajax({
+			type:"get",
+			url:"data/register/02-check-uname.php?uname="+uname
+			
+				}).then(data=>{
+					console.log(data=="1");
+				});*/
+				console.log(uname);
+			})
+		
+	     /* function check_uname(){
+		     //1.创建xhr对象
+			 var xhr=createXhr();
+			 //2.创建请求
+			 var uname=$("uname").value;
+	       var url="data/register/02-check-uname.php?uname="+uname;
+			 xhr.open("get",url,true);
+			 //3.设置回调函数
+			xhr.onreadystatechange=function(){
+			   if(xhr.readyState==4&&xhr.status==200){
+			      var res=xhr.responseText;
+				  if(res=="1")
+				   {
+				   $("uname-show").innerHTML="用户名已存在";
+				     isUname=false; //不让注册
+				   }else if(uname==""){
+				   	$("uname-show").innerHTML="用户名不能为空";
+				   	isName=false; //不让注册
+				   }else if(uname.length<6||uname.length>18){
+				   		$("uname-show").innerHTML="用户名格式不对";
+				   			isName=false; //不让注册
+				   }else{
+				      $("uname-show").innerHTML="通过"; 
+					  isUname=true; 
+					  isName=true;
+				   }
+			   }
+			}
+			xhr.send(null);
+		  }*/
+	      //用户名获取焦点
+	     /*  function uname_focus(){
+		       $("uname-show").innerHTML="用户名6-18位";
+		   }
+	     var isUpwd=true;//允许注册
+	       //密码获取焦点
+			function upwd_focus(){
+			$("upwd-show").innerHTML="密码6-18位";
+			}
+		 //密码失去焦点
+		 function upwd_blur(){
+			var upwd=$("upwd").value;
+			if(upwd==""){
+				$("upwd-show").innerHTML="密码不能为空";
+				isUpwd=false;//不让注册
+			}else if(upwd.length<6 || upwd.length>18){
+
+				$("upwd-show").innerHTML="密码格式不对！";
+				isUpwd=false;//不让注册
+			}else{		
+				$("upwd-show").innerHTML="通过！";
+				isUpwd=true;//允许注册
+			}
+			}
+		 var isCpwd=true;//允许注册
+		//重复密码失去焦点时,判断两次密码是否一致
+		function cpwd_blur(){
+		if(($("upwd").value==$("cpwd").value)&&($("upwd").value!="")){
+			      $("cpwd-show").innerHTML="通过！";
+			      isCpwd=true;//允许注册
+			   }else{
+			      $("cpwd-show").innerHTML="两次密码不一致！";
+			      isCpwd=false;//不允许注册
+			   }
+		}    
+		 //注册按钮
+		 function user_register(){
+		    
+			   //1.创建xhr对象
+			     var xhr=createXhr();
+			   //2.创建请求
+			     xhr.open("post","data/register/02-register.php",true);
+			   //3.设置回调
+			     xhr.onreadystatechange=function(){
+				    if(xhr.readyState==4&&xhr.status==200){
+					    alert(xhr.responseText);
+					}
+				 }
+				//增加:更改请求头
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			   //4.发送请求
+			   var uname=$("uname").value;
+			   var upwd=$("upwd").value;
+			   //var email=$("email").value;
+			   var phone=$("phone").value;
+			  //var user_name=$("user_name").value;
+			   var gender=$("gender").value
+			 var msg="uname="+uname+"&upwd="+upwd+"&phone="+phone+"&gender="+gender; 
+			 if(!isUname){
+			   alert("该用户不能注册,请修改后再注册");
+			}else if(!isName){
+				alert("用户名格式不正确,请修改后再注册");
+			}else if(!isUpwd){
+				alert("密码格式不正确,请修改后再注册");
+			}else if(!isCpwd){
+				alert("两次密码不一致,请修改后再注册")
+			}else{
+			  xhr.send(msg);
+			}
+		 }
+		   */

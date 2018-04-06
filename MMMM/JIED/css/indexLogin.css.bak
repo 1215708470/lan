@@ -1,0 +1,213 @@
+
+
+/*图片区域*/
+#login{
+	background: #fff;
+	padding: 30px 0px;
+	}
+.main > div.pic{
+	width:508px;
+	margin:50px 50px 0px 0px;
+}
+.none{
+	display:none;
+}
+div.userform{
+    left: 50%;
+    margin: -170px 0 0 -206px;
+    position: fixed;
+    top: 50%;
+    width: 392px;
+	z-index:999;
+	
+}
+.userform_hd{
+	height: 60px;
+    background: #000;
+    color: #fff;
+    margin: 0;
+}
+.tml-contentbox{
+	width: 412px;
+    height: 340px;
+    left: 50%;
+    margin: -181px 0 0 -216px;
+    position: fixed;
+    top: 50%;
+    background: #716564;
+	opacity: 0.5;
+}
+.tml-dialog{
+	display:none;
+	/* width:412px;
+	height:340px;
+	 left: 50%;
+	 margin: -181px 0 0 -216px;
+	 position: fixed;
+	 top: 50%; 
+	background:#716564; */
+ 	/* opacity: 0.5; */
+   
+}
+div.userform > p.userform_hd{
+	background: #000;
+    margin: 0px;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 40px;
+    height: 60px;
+    line-height: 30px;
+
+}
+a.close{
+	display: block;
+    height: 16px;
+	width:17px;
+	background: url(../img/login/icon10.png) 0 -25px no-repeat;
+}
+.login_uame,.login_upwd{
+	display: inline-block;
+	width: 88px;
+	height: 32px;
+    padding-right: 15px;
+    text-align: right;
+}
+#txtName,#txtPwd{
+	height: 24px;
+    line-height: 24px;
+    width: 180px;
+    border: 1px solid #c8c8c8;
+    padding-left: 5px;
+}
+p.aoid_login{
+	margin-left: 106px;
+	margin-top:0px;
+}
+.login_btn{
+	background: url(../img/login/icon11.png) 0 -100px no-repeat;
+    border: 0 none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0;
+    height: 27px;
+    margin-left: 110px;
+    line-height: 100px;
+    margin-right: 6px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 86px;
+}
+p.but_box{
+    margin:0px;
+}
+div.note_landing{
+    width:279px;
+    height:30px;
+    margin:5px auto;
+    border-top:0.5px solid #9c9999;
+}
+div.note_landing>p{
+    margin:3px;
+    text-align: center;
+}
+.note_landing>p>a{
+    display: inline-block;
+    height: 17px;
+    margin-top: 6px;
+    line-height: 18px;
+    vertical-align: top;
+}
+.phoneBg{
+    display: inline-block;
+    width:16px;
+    height:18px;
+    margin-top:5px;
+    background: url(../img/login/icon11.png) -326px -196px;
+}
+.login_help{
+	display:inline-block;
+	width:12px;
+	height:12px;
+	background: url(../img/login/icon11.png) -325px -367px;
+}
+.warm_prompt {
+    height: 19px;
+    width: 700px;
+    text-align: center;
+    color: red;
+    margin: 20px auto;
+}
+/*页面底部*/
+/*footer.footer{
+	width:100%;
+	height:445px;
+}
+footer > div.foot_box{
+	width:1000px;
+	height:200px;
+	padding:30px 0px;
+	margin:0 auto;
+}
+footer > div.foot{
+	width:1000px;
+	height:185px;
+	margin:0 auto;
+}
+.foot_box > div.foot_serve{
+	width:162px;
+	height:140px;
+	border-left: 1px dashed #ddd;
+    border-right: 1px dashed #ddd;
+}
+div.foot_serve > a{
+	display: inline-block;
+    margin: 16px 5px;
+    width: 65px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #cd9368;
+    border-radius: 4px;
+    color: #cd9368;
+}
+.foot_guide > li{
+	width:110px;
+	height:140px;
+	border-right: 1px dashed #ddd;
+	text-align:center;
+}
+ul.foot_guide > li > a{
+	display:block;
+	line-height:26px;
+	color:#999;
+	font-size: 13px;
+}
+ul.foot_guide > li > h3{
+	margin-bottom:12px;
+	font-size: 16px;
+}
+ul.foot_barcode > li{
+	float:left;;
+	margin-left:45px;
+}
+ul.foot_barcode > li > h3{
+	text-align:center;
+	margin-bottom:12px;
+}
+ul.foot_barcode > li > img{
+	width:96px;
+}
+div.foot_btm > div{
+	text-align:center;
+	color:#999;
+	margin:20px 0px;
+}
+div.foot_btm > div > a{
+	margin:0 10px;
+}
+div.foot_btm > p{
+	text-align:center;
+}
+.foot_btm > p > a{
+	padding: 0 12px;
+}*/
